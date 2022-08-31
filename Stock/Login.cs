@@ -29,7 +29,7 @@ namespace Stock
         private void button2_Click(object sender, EventArgs e)
         {
             //  TODO:   Check login username & password
-            SqlConnection con = new SqlConnection("Data Source=.\\SQLEXPRESS01;Initial Catalog=Stock;Integrated Security=True");
+            SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-LIPIANJO\SQLEXPRESS;Initial Catalog=Stock;Integrated Security=True");
             SqlDataAdapter sda = new SqlDataAdapter(@"SELECT *
                 FROM [Stock].[dbo].[Login] WHERE UserName='" + textBox1.Text + "' and" +
                 " Password='" + textBox2.Text + "'", con);
